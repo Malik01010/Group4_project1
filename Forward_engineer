@@ -12,7 +12,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Table `employee`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `employee` (
-  `employee_id` VARCHAR(10) NOT NULL,
+  `employee_id` INT NOT NULL,
   `l_name` VARCHAR(45) NULL,
   `f_name` VARCHAR(45) NULL,
   `job_title` VARCHAR(45) NULL,
@@ -53,7 +53,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Product` (
   `Product_id` INT NOT NULL,
   `product_name` VARCHAR(45) NULL,
-  `price` VARCHAR(45) NULL,
+  `price` DECIMAL(5,2) NULL,
   `category` VARCHAR(45) NULL,
   PRIMARY KEY (`Product_id`))
 ENGINE = InnoDB;
@@ -81,14 +81,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Transaction` (
   `transaction_id` INT NOT NULL,
-  `transaction_date` VARCHAR(45) NULL,
+  `transaction_date` DATE NULL,
   `payment_method` VARCHAR(45) NULL,
-  `amount_paid` VARCHAR(45) NULL,
-  `Customer_customer_id` INT NOT NULL,
+  `amount_paid` DECIMAL(5,2) NULL,
+  `customer_id` INT NOT NULL,
   PRIMARY KEY (`transaction_id`),
-  INDEX `fk_Transaction_Customer1_idx` (`Customer_customer_id` ASC) VISIBLE,
+  INDEX `fk_Transaction_Customer1_idx` (`customer_id` ASC) VISIBLE,
   CONSTRAINT `fk_Transaction_Customer1`
-    FOREIGN KEY (`Customer_customer_id`)
+    FOREIGN KEY (`customer_id`)
     REFERENCES `Customer` (`customer_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
