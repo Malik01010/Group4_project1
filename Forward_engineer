@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `l_name` VARCHAR(45) NULL,
   `f_name` VARCHAR(45) NULL,
   `job_title` VARCHAR(45) NULL,
-  `boss_id` VARCHAR(10) NOT NULL,
+  `boss_id` INT NOT NULL,
   PRIMARY KEY (`employee_id`),
   INDEX `fk_employee_employee1_idx` (`boss_id` ASC) VISIBLE,
   CONSTRAINT `fk_employee_employee1`
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `Customer` (
   `l_name` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
   `phone` VARCHAR(45) NULL,
-  `employee_id` VARCHAR(10) NOT NULL,
+  `employee_id` INT NOT NULL,
   PRIMARY KEY (`customer_id`),
   INDEX `fk_Customer_employee1_idx` (`employee_id` ASC) VISIBLE,
   CONSTRAINT `fk_Customer_employee1`
