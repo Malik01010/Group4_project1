@@ -50,7 +50,7 @@ VALUES
 (9, '2024-09-24', 9),
 (10, '2024-09-24', 10);
 
-INSERT INTO order_details (order_id, product_id, total_price, quantity)
+INSERT INTO `order details` (order_id, product_id, total_price, quantity)
 VALUES
 (1, 1, 12.99, 1),
 (1, 9, 1.99, 2),
