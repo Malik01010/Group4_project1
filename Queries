@@ -5,7 +5,7 @@ FROM `order details` JOIN  Product on `order details`. product_id = Product.Prod
 ORDER BY quantity DESC; 
 
 
-How many orders were received in each day
+##How many orders were received in each day
 SELECT count(order_id)
 FROM  `Order`
 Group by order_date;
