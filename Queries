@@ -9,3 +9,17 @@ ORDER BY quantity DESC;
 SELECT count(order_id)
 FROM  `Order`
 Group by order_date;
+
+
+##Check daily sales performance
+SELECT T.transaction_date, SUM(T.amount_paid) AS daily_sales
+FROM Transaction T
+GROUP BY T.transaction_date
+ORDER BY T.transaction_date DESC;
+
+##Analyze peak business hours
+SELECT HOUR(T.transaction_date) AS hour_of_day, COUNT(T.transaction_id) AS transactions
+FROM Transaction T
+GROUP BY HOUR(T.transaction_date)
+ORDER BY transactions DESC;
+
