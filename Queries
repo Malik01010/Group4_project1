@@ -17,9 +17,9 @@ FROM Transaction T
 GROUP BY T.transaction_date
 ORDER BY T.transaction_date DESC;
 
-##Analyze peak business hours
-SELECT HOUR(T.transaction_date) AS hour_of_day, COUNT(T.transaction_id) AS transactions
-FROM Transaction T
-GROUP BY HOUR(T.transaction_date)
-ORDER BY transactions DESC;
 
+#Total revenue for each of the payment types
+SELECT T.payment_method, SUM(T.amount_paid) AS total_revenue
+FROM Transaction T
+GROUP BY T.payment_method
+ORDER BY total_revenue DESC;
