@@ -39,3 +39,24 @@ WHERE t.customer_id IN (
     HAVING SUM(od.total_price * od.quantity) > 20
 )
 GROUP BY t.payment_method;
+
+## Average Transaction Value per Employee
+## This query calculates the average value of transactions handled by each employee. (Complex)
+
+SELECT 
+    e.employee_id,
+    e.f_name AS employee_first_name,
+    e.l_name AS employee_last_name,
+    AVG(Transaction.amount_paid) AS average_transaction_value
+FROM 
+    employee e
+JOIN 
+    Customer c ON e.employee_id = c.employee_id
+JOIN 
+    `Order` o ON c.customer_id = o.customer_id
+JOIN 
+    Transaction ON c.customer_id = Transaction.customer_id
+GROUP BY 
+    e.employee_id
+ORDER BY 
+    average_transaction_value DESC;
