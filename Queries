@@ -23,3 +23,19 @@ SELECT T.payment_method, SUM(T.amount_paid) AS total_revenue
 FROM Transaction T
 GROUP BY T.payment_method
 ORDER BY total_revenue DESC;
+
+
+## Query to find the average transaction amount per payment method for customers who spent more than $20:
+## Complex
+
+SELECT t.payment_method, AVG(t.amount_paid) AS avg_transaction_amount
+FROM Transaction t
+WHERE t.customer_id IN (
+    SELECT c.customer_id
+    FROM Customer c
+    JOIN `Order` o ON c.customer_id = o.customer_id
+    JOIN `order details` od ON o.order_id = od.order_id
+    GROUP BY c.customer_id
+    HAVING SUM(od.total_price * od.quantity) > 20
+)
+GROUP BY t.payment_method;
