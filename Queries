@@ -1,4 +1,4 @@
-## which product was ordered the most
+## which product was ordered the most (Simple)
 
 SELECT product_name, quantity
 FROM `order details` JOIN  Product on `order details`. product_id = Product.Product_id
