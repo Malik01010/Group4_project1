@@ -60,3 +60,19 @@ GROUP BY
     e.employee_id
 ORDER BY 
     average_transaction_value DESC;
+
+
+## Query to get customers who have ordered more than 1 distinct product and the total amount they've spent:
+# 1 = Margherita Pizza, 9 = Coke , 2 = Pepperoni Pizza, 7 = Buffalo Wings
+
+SELECT c.f_name, c.l_name, 
+       GROUP_CONCAT(DISTINCT od.product_id ORDER BY od.product_id) AS product_ids_ordered, 
+       COUNT(DISTINCT od.product_id) AS distinct_products_ordered, 
+       SUM(od.total_price * od.quantity) AS total_spent
+FROM Customer c
+JOIN `Order` o ON c.customer_id = o.customer_id
+JOIN `order details` od ON o.order_id = od.order_id
+GROUP BY c.customer_id
+HAVING COUNT(DISTINCT od.product_id) > 1;
+
+
