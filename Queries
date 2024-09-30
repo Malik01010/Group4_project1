@@ -5,20 +5,20 @@ FROM `order details` JOIN  Product on `order details`. product_id = Product.Prod
 ORDER BY quantity DESC; 
 
 
-##How many orders were received in each day
+##How many orders were received in each day (Simple)
 SELECT count(order_id)
 FROM  `Order`
 Group by order_date;
 
 
-##Check daily sales performance
+##Check daily sales performance (Simple)
 SELECT T.transaction_date, SUM(T.amount_paid) AS daily_sales
 FROM Transaction T
 GROUP BY T.transaction_date
 ORDER BY T.transaction_date DESC;
 
 
-#Total revenue for each of the payment types
+#Total revenue for each of the payment types (Simple)
 SELECT T.payment_method, SUM(T.amount_paid) AS total_revenue
 FROM Transaction T
 GROUP BY T.payment_method
