@@ -16,6 +16,11 @@ Our task was to build a Relational Database focused on the day to day operations
 ## Team
 
 - Abhi Malik [@Malik01010](https://github.com/Malik01010)
+- Eric Kho [@ek29262](https://github.com/ek29262)
+- Arish Petani [@Arishpetani](https://github.com/Arishpetani)
+- Samuel Suen [@samsuen999](https://github.com/samsuen999)
+- Dan
+
 
 
 ## Data Model
