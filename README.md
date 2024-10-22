@@ -72,6 +72,11 @@ This query returns the average transaction value from each payment method where 
 This shows the average transaction value of transactions by employees. This shows high performance employees. We can use this information to promote employees, or see what strategies high performance employees are using and use the strategy with our other employees.
 ![image](https://github.com/user-attachments/assets/f5a7bf17-25bf-464e-b64d-efa036401f3b)
 
+## Query 7
+This query shows the customers who ordered more than 1 distinct product and the total amount they spent. This is good for seeing which products are ordered together. We can run promotional deals based of these combinations.
+![image](https://github.com/user-attachments/assets/459b4266-00a1-4050-8e3d-43469914cae1)
 
-
+## Query 8
+This query shows which products are being sold by each employee. This shows which products each employee is more inclined to promote. This can help determine which products are selling more effectively.
+![image](https://github.com/user-attachments/assets/9d0021df-31de-44a5-8ba4-625e49717b80)
 
