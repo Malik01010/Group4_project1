@@ -31,7 +31,14 @@ Our task was to build a Relational Database focused on the day to day operations
 ## Data Dictionary
 <img width="838" alt="Screenshot 2024-10-16 at 3 08 01 PM" src="https://github.com/user-attachments/assets/796439b2-cb38-4e17-9eba-9e3fe01a6f2d">
 
-<img width="915" alt="Screenshot 2024-10-16 at 3 08 37 PM" src="https://github.com/user-attachments/assets/02333229-9dc6-4eb1-ab6f-c94d64618ac1">
+## Queries 
+
+| Features | Query 1    | Query 2   | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
+| :-------- | :------- | :---------- | --- | ---        | ---     | ---     | ---     | ----    | -----   | -----     |
+| Multi Table Join     | put x | x | x | x | x | x | x | x | x | x |
+| Group By | put x | x | x | x | x | x | x | x | x | x |
+
+
 
 
 
