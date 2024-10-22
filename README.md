@@ -35,8 +35,11 @@ Our task was to build a Relational Database focused on the day to day operations
 
 | Features | Query 1    | Query 2   | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
 | :-------- | :------- | :---------- | --- | ---        | ---     | ---     | ---     | ----    | -----   | -----     |
-| Multi Table Join     | put x | x | x | x | x | x | x | x | x | x |
-| Group By | put x | x | x | x | x | x | x | x | x | x |
+| Multi Table Join |  |  |  |  | x | x | x | x | x | x |
+| Group By |  | x | x | x | x | x | x | x | x | x |
+| Built in Functions | | x | x | x | x | x | x | x | x | x |
+| Group By with Having |  |  |  |  | x |  | x |  | x | x |
+| Subquery|  |  |  |  |  |  |  |  |  |  |
 
 
 
