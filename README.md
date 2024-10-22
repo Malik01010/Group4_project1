@@ -43,5 +43,35 @@ Our task was to build a Relational Database focused on the day to day operations
 
 
 
+## Query 1
+This query returns which products were ordered the most. This can help with pricing items, advertising items, and with inventory.
+
+![image](https://github.com/user-attachments/assets/a7d9a054-6f25-4541-9d5b-a81c00d9bdf8)
+
+## Query 2
+This query shows how many products are ordered on certain dates. This is good for analyzing important dates such as weekends and holidays to analyze which days get more orders.
+
+![image](https://github.com/user-attachments/assets/ab81bc6e-c144-43df-8334-2236d257f2f3)
+
+## Query 3
+This query shows the revenue from each day. This can also be used for analyzing important dates, and which days are seeing the more orders or more expensive items being ordered.
+
+![image](https://github.com/user-attachments/assets/d0c2efda-345f-4c1b-a3fb-56d8595515f1)
+
+## Query 4
+This query returns the total revenue from each payment method. This is good for determing how much cash should be kept in the cash register, and if we should invest in more card readers.
+
+![image](https://github.com/user-attachments/assets/368dc9ef-d888-4eb8-86fa-e163550ab994)
+
+## Query 5
+This query returns the average transaction value from each payment method where customers paid over $20. This helps pinpoint what method customers are using in our highest value transactions.
+
+![image](https://github.com/user-attachments/assets/68a3f381-89a9-4c00-93be-213436278869)
+
+## Query 6
+This shows the average transaction value of transactions by employees. This shows high performance employees. We can use this information to promote employees, or see what strategies high performance employees are using and use the strategy with our other employees.
+![image](https://github.com/user-attachments/assets/f5a7bf17-25bf-464e-b64d-efa036401f3b)
+
+
 
 
