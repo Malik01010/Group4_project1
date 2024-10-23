@@ -89,20 +89,20 @@ JOIN Product p ON od.product_id = p.Product_id
 GROUP BY e.employee_id, p.product_id
 ORDER BY total_revenue_generated DESC;
 
-## Customers who have placed more orders than the average number of orders placed by all customers
-SELECT c.customer_id, c.f_name, c.l_name, COUNT(o.order_id) AS total_orders
-FROM Customer c
-JOIN `Order` o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id, c.f_name, c.l_name
-HAVING COUNT(o.order_id) > (
-    SELECT AVG(order_count)
-    FROM (
-        SELECT COUNT(o2.order_id) AS order_count
-        FROM `Order` o2
-        GROUP BY o2.customer_id
-    ) avg_orders
+ ##Find the top 3 customers who have spent the most, including the employee who manages them
+WITH CustomerSpending AS (
+    SELECT c.customer_id, c.f_name, c.l_name, SUM(t.amount_paid) AS total_spent
+    FROM Customer c
+    JOIN Transaction t ON c.customer_id = t.customer_id
+    GROUP BY c.customer_id
 )
-ORDER BY total_orders DESC;
+SELECT cs.customer_id, cs.f_name, cs.l_name, cs.total_spent, e.f_name AS employee_f_name, e.l_name AS employee_l_name
+FROM CustomerSpending cs
+JOIN Customer c ON cs.customer_id = c.customer_id
+JOIN employee e ON c.employee_id = e.employee_id
+ORDER BY cs.total_spent DESC
+LIMIT 3;
+
 
 ##For each product category, find the percentage of total sales that came from the most popular product
 WITH CategorySales AS (
