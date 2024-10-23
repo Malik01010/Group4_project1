@@ -80,6 +80,11 @@ This query shows the customers who ordered more than 1 distinct product and the 
 This query shows which products are being sold by each employee. This shows which products each employee is more inclined to promote. This can help determine which products are selling more effectively.
 ![image](https://github.com/user-attachments/assets/9d0021df-31de-44a5-8ba4-625e49717b80)
 
+## Query 9
+This shows the highest spending 3 customers and the employees who managed them. With this we can determine our highest spending and most loyal customers. We can also see which employees are good at getting customers to spend more.
+![image](https://github.com/user-attachments/assets/176d9e43-12ac-42e4-8001-28f0967142f9)
+
+
 ## Query 10
 This query shows what percent of products sold were the most popular product. This determines how much of sales the most popular product truly takes up. This can help with what products we should market or change.
 ![image](https://github.com/user-attachments/assets/ee04bafc-4508-49fc-aa3c-d85660b92f28)
