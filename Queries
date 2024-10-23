@@ -89,3 +89,35 @@ JOIN Product p ON od.product_id = p.Product_id
 GROUP BY e.employee_id, p.product_id
 ORDER BY total_revenue_generated DESC;
 
+## Customers who have placed more orders than the average number of orders placed by all customers
+SELECT c.customer_id, c.f_name, c.l_name, COUNT(o.order_id) AS total_orders
+FROM Customer c
+JOIN `Order` o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.f_name, c.l_name
+HAVING COUNT(o.order_id) > (
+    SELECT AVG(order_count)
+    FROM (
+        SELECT COUNT(o2.order_id) AS order_count
+        FROM `Order` o2
+        GROUP BY o2.customer_id
+    ) avg_orders
+)
+ORDER BY total_orders DESC;
+
+##For each product category, find the percentage of total sales that came from the most popular product
+WITH CategorySales AS (
+    SELECT p.category, SUM(od.total_price * od.quantity) AS category_total
+    FROM Product p
+    JOIN order_details od ON p.product_id = od.product_id
+    GROUP BY p.category
+),
+TopProductSales AS (
+    SELECT p.category, MAX(od.total_price * od.quantity) AS top_product_sales
+    FROM Product p
+    JOIN order_details od ON p.product_id = od.product_id
+    GROUP BY p.category
+)
+SELECT cs.category, (tp.top_product_sales / cs.category_total) * 100 AS percentage_from_top_product
+FROM CategorySales cs
+JOIN TopProductSales tp ON cs.category = tp.category
+ORDER BY percentage_from_top_product DESC;
