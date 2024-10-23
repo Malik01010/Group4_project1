@@ -80,3 +80,6 @@ This query shows the customers who ordered more than 1 distinct product and the 
 This query shows which products are being sold by each employee. This shows which products each employee is more inclined to promote. This can help determine which products are selling more effectively.
 ![image](https://github.com/user-attachments/assets/9d0021df-31de-44a5-8ba4-625e49717b80)
 
+## Databse Information
+
+All queries can be called using stored procedures using this format: CALL TP_Q1();
