@@ -40,9 +40,9 @@ Our task was to build a Relational Database focused on the day to day operations
 | :-------- | :------- | :---------- | --- | ---        | ---     | ---     | ---     | ----    | -----   | -----     |
 | Multi Table Join |  |  |  |  | x | x | x | x | x | x |
 | Group By |  | x | x | x | x | x | x | x | x | x |
-| Built in Functions | | x | x | x | x | x | x | x | x | x |
-| Group By with Having |  |  |  |  | x |  | x |  | x | x |
-| Subquery|  |  |  |  |  |  |  |  |  |  |
+| Built in Functions | | x | x | x | x | x | x | x |  | x |
+| Group By with Having |  |  |  |  | x |  | x |  |  |  |
+| Subquery|  |  |  |  |  |  |  |  |x  | x |
 
 
 
