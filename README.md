@@ -31,6 +31,9 @@ Our task was to build a Relational Database focused on the day to day operations
 ## Data Dictionary
 <img width="838" alt="Screenshot 2024-10-16 at 3 08 01 PM" src="https://github.com/user-attachments/assets/796439b2-cb38-4e17-9eba-9e3fe01a6f2d">
 
+<img width="915" alt="Screenshot 2024-10-23 at 2 40 08 PM" src="https://github.com/user-attachments/assets/67c84669-4c4b-4af5-94b1-91870faee63b">
+
+
 ## Queries 
 
 | Features | Query 1    | Query 2   | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
