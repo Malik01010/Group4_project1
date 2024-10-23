@@ -81,7 +81,7 @@ This query shows which products are being sold by each employee. This shows whic
 ![image](https://github.com/user-attachments/assets/9d0021df-31de-44a5-8ba4-625e49717b80)
 
 ## Query 10
-
+This query shows what percent of products sold were the most popular product. This determines how much of sales the most popular product truly takes up. This can help with what products we should market or change.
 ![image](https://github.com/user-attachments/assets/ee04bafc-4508-49fc-aa3c-d85660b92f28)
 
 
